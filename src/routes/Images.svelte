@@ -19,11 +19,11 @@
 		const baseUrl = process.env.BASE_URL;
 		const apiKey = process.env.API_KEY;
 
-		const res = await fetch(`${baseUrl}/image?apikey=${apiKey}&sort=random`);
+		const res = await fetch(`${baseUrl}/image?apikey=${apiKey}&sort=random`).catch((error) => {
+			throw new Error(error);
+		});
 		const body = await res.json();
 		images = body.records;
-
-		console.log('images', images);
 	});
 </script>
 
