@@ -1,6 +1,8 @@
 <Header/>
 <main>
-	<Router {routes}/>
+	<div class="contents">
+		<Router {routes}/>
+	</div>
 </main>
 
 <script lang="typescript">
@@ -14,6 +16,10 @@
 	main {
 		text-align: center;
 		max-width: 240px;
+
+		.contents {
+			padding: var(--top-offset) 0;
+		}
 	}
 
 	@media (min-width: 640px) {

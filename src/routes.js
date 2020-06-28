@@ -1,6 +1,7 @@
 // Components
 import Home from './routes/Home.svelte'
 import Lucky from './routes/Lucky.svelte'
+import Images from './routes/Images.svelte'
 import NotFound from './routes/NotFound.svelte'
 
 const routes = {
@@ -8,6 +9,8 @@ const routes = {
     '/': Home,
 
     '/lucky': Lucky,
+
+    '/images': Images,
 
     // Catch-all, must be last
     '*': NotFound,

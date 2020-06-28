@@ -11,6 +11,9 @@
             <li>
                 <a href="/lucky" use:link>Lucky</a>
             </li>
+            <li>
+                <a href="/images" use:link>Images</a>
+            </li>
         </ul>
     </nav>
 </header>
