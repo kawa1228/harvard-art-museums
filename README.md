@@ -60,19 +60,20 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 
 ## Deploying to the web
 
-### With [now](https://zeit.co/now)
+### With [vercel](https://vercel.com/)
 
 Install `now` if you haven't already:
 
 ```bash
-npm install -g now
+npm i -g vercel
+vercel init
 ```
 
 Then, from within your project folder:
 
 ```bash
-cd public
-now deploy --name my-project
+cd this.repository
+vercel
 ```
 
 As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
@@ -90,4 +91,15 @@ Then, from within your project folder:
 ```bash
 npm run build
 surge public my-project.surge.sh
+```
+## set environment variables
+
+```.env
+API_KEY=**********
+BASE_URL=**********
+```
+
+```App.svelte
+const isProd = process.env.isProd
+console.log(isProd)
 ```
